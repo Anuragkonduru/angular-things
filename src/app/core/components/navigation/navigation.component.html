@@ -1,0 +1,12 @@
+<div class="flex gap-2 flex-col w-70 flex justify-center">
+  @for (item of navigationList; track item.name){
+  <a
+    [routerLink]="['/' + item.link]"
+    [routerLinkActive]="['active']"
+    class="hover:underline hover:text-red-600"
+    >{{ item.name }}</a
+  >
+  } @empty {
+  <p class="text-xl text-red-600">No Items in Navigation</p>
+  }
+</div>
