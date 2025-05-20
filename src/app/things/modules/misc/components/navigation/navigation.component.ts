@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NAVIGATION_LINK } from '../../constants/navigation';
-import { NavigationItemInterface } from '../../../shared/interfaces/interfaces';
+import { NavigationItemInterface } from '../../../../../shared/interfaces/interfaces';
+import { NAVIGATION_LINK } from './constants/navigation';
 
 @Component({
   selector: 'app-navigation',
