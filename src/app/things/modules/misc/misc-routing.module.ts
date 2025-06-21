@@ -10,15 +10,19 @@ import { SubjectsComponent } from './components/subjects/subjects.component';
 import { MiscComponent } from './misc.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'misc-landing', pathMatch: 'full' },
-  { path: 'misc-landing', component: MiscComponent },
-  { path: 'observables', component: ObservableComponent },
-  { path: 'promises', component: PromisesComponent },
-  { path: 'inputoutput', component: InputOutputComponent },
-  { path: 'http', component: HttpComponent },
-  { path: 'subjects', component: SubjectsComponent },
-  { path: 'forms', component: FormsComponent },
-  { path: 'lifecycle', component: LifecycleComponent },
+  {
+    path: '',
+    component: MiscComponent,
+    children: [
+      { path: 'observables', component: ObservableComponent },
+      { path: 'promises', component: PromisesComponent },
+      { path: 'inputoutput', component: InputOutputComponent },
+      { path: 'http', component: HttpComponent },
+      { path: 'subjects', component: SubjectsComponent },
+      { path: 'forms', component: FormsComponent },
+      { path: 'lifecycle', component: LifecycleComponent },
+    ],
+  },
 ];
 
 @NgModule({
